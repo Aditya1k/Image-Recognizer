@@ -1,0 +1,87 @@
+ 
+<html>
+  <head>
+    <title>Image recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+   <link rel="stylesheet" href="style.css">
+  
+  </head>
+  <style>
+body {
+  background-color: yellow;
+  font-family: cursive;
+}
+.items {
+  font-size: 20px;
+}
+.items:hover {
+  font-size: 30px;
+}
+#heading {
+  border: 10px solid blue;
+  background-color: black;
+}
+#heading:hover {
+  background-color: white;
+}
+  </style>
+  <body>
+    <center>
+    <h1 id="heading" style="color: orange;"><b><u>Image recognizor</u></b></h1>
+    </center>
+  <div class="container">
+    
+    <center>
+
+      <br><br>
+
+      <p style="font-size: 35px;">Model is trained to identify the following objects: </p>
+
+
+      <br><p class="items">Spoon</p><br>
+
+      <hr>
+
+      <br><p class="items">Bottle</p><br>
+
+      <hr>
+
+      <br><p class="items">TV Remote</p><br>
+
+      <hr>
+
+      <br><p class="items">Rubik's cube</p><br>
+
+      <label style="color: blue; font-size: 30px">Webcam View - </label>
+      <br>
+      <br>
+
+      <div class="container" id="camera"></div>
+      <br>
+      <br>
+
+      <div id="result"></div>
+      <br>
+      <button class="btn btn-primary" onclick="take_snapshot()">Take Picture</button>
+      <br>
+      <br>
+      <button class="btn btn-success" onclick="check()">Identy Image</button>
+
+      <p style="font-size: 22px;">Object :  <span id="Name_of_the_object"></span></p>
+      <p style="font-size: 22px;">Accuracy : <span id="Accuracy_of_the_object"></span> </p>
+    </center>
+
+  </div>
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
